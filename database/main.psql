@@ -5,4 +5,3 @@ ALTER ROLE admin SET timezone TO 'UTC';
 ALTER ROLE admin WITH CREATEDB;
 CREATE DATABASE nebula;
 ALTER DATABASE nebula OWNER TO admin;
-
