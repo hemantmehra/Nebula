@@ -20,10 +20,11 @@ from nebula.settings_common import *
 SECRET_KEY = 'django-insecure-ny6i-l)q9qbt#$v(94sn878nkfrb8+gplrs$q2%*@dpl55_6p@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['hemantmehra.com']
-
+ALLOWED_HOSTS = ['.hemantmehra.com']
+CSRF_TRUSTED_ORIGINS = ['https://*.hemantmehra.com']
+# CSRF_COOKIE_DOMAIN = ['.hemantmehra.com']
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
