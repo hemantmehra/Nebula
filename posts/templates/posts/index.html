@@ -1,11 +1,24 @@
-<!-- my_app/templates/my_app/index.html -->
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ page_title }}</title>
+    <title>Nebula</title>
+    <style>
+        .navbar {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        .navbar-item {
+            display: inline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello from Django!</h1>
-    <p>This is your index page.</p>
+    <ul class="navbar">
+        <li class="navbar-item"><a href="{% url 'admin:index' %}">Admin</a></li>
+    </ul>
+    <h1>Nebula</h1>
+    <p>Welcome</p>
 </body>
 </html>
