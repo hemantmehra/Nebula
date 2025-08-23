@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve myproject
+After=network.target
+
+[Service]
+User=ubuntu
+Group=root
+WorkingDirectory=/home/ubuntu/nebula
+Environment="PATH=/home/ubuntu/nebula/venv/bin"
+ExecStart=/home/ubuntu/nebula/venv/bin/gunicorn --workers 2 --bind unix:gunicorn.sock -m 007 nebula.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
