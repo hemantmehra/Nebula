@@ -1,0 +1,8 @@
+CREATE USER admin WITH PASSWORD 'mypass';
+ALTER ROLE admin SET client_encoding TO 'utf8';
+ALTER ROLE admin SET default_transaction_isolation TO 'read committed';
+ALTER ROLE admin SET timezone TO 'UTC';
+ALTER ROLE admin WITH CREATEDB;
+CREATE DATABASE nebula;
+ALTER DATABASE nebula OWNER TO admin;
+
