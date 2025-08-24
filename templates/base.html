@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nebula</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            margin: 0;
+            padding: 0;
+            background-color: #999;
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="">
+        {% if user.is_authenticated %}
+            <span>{{ user.username }}</span>
+            <a href="{% url 'users:logout' %}">Logout</a>
+        {% else %}
+            <a href="{% url 'users:login' %}">Login</a>
+        {% endif %}
+    </nav>
+{% block content %}{% endblock %}
+</body>
+</html>

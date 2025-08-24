@@ -1,24 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Nebula</title>
-    <style>
-        .navbar {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-        .navbar-item {
-            display: inline;
-        }
-    </style>
-</head>
-<body>
-    <ul class="navbar">
-        <li class="navbar-item"><a href="{% url 'admin:index' %}">Admin</a></li>
-    </ul>
+{% extends "base.html" %}
+{% block content %}
     <h1>Nebula</h1>
-    <p>Welcome</p>
-</body>
-</html>
+{% endblock %}
